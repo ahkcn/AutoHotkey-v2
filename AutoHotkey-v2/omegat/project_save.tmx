@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx11.dtd">
+<tmx version="1.1">
+  <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="2.6.3_10" segtype="sentence" srclang="EN-US"/>
+  <body>
+<!-- Default translations -->
+    <tu>
+      <tuv lang="EN-US">
+        <seg>A summary of changes will be posted here each time a new alpha is released.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T092824Z">
+        <seg>每次的变更记录会追加到本主题</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Additionally x is y, where y is an object, checks if x derives from y, directly or indirectly.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T092833Z">
+        <seg>此外，对x is y，当y是对象时，检测x是否派生自y，不论直接或间接。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>All WinSet' functions now return 1 on success, 0 on failure, while ErrorLevel is set to 0 on success, 1 on failure.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T083111Z">
+        <seg>所以的WinSet函数成功时返回1，失败时返回0，同时，ErrorLevel成功时为0，失败时为1。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>All other threads default to the last setting used by the auto-execute section, which itself defaults to no criterion (global hotkeys).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T112208Z">
+        <seg>其他线程默认为最近一次于自动执行段处的设置，默认为无限定条件（即全局热键）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>AutoHotkey v2</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085458Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Changed FileOpen() error handling for consistency with other commands.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T100640Z">
+        <seg>改变FileOpen()的错误处理方式至与其他命令一致。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Changed float format string for better accuracy and to avoid truncation.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111735Z">
+        <seg>完善浮点数格式的字符串，提升精度并避免被截短。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Changed regex option `a to enable \R to match Unicode newlines.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T095325Z">
+        <seg>改变正则选项`a，使\R可匹配Unicode新行符。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Changes from v1.1 to v2.0-a</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T073408Z">
+        <seg>V1.1自V2.0-a的变更文档</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>ComObject(pdsp), ComObject(9, pdsp) and ComObject(13, pdsp) no longer call AddRef by default; they default to "taking ownership" of the pointer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T105522Z">
+        <seg>ComObject(pdsp)、ComObject(9, pdsp)与ComObject(13, pdsp)默认不再调用AddRef；默认他们将作为指针的"持有者"。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Commands which set ErrorLevel now do so regardless of how they are called.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T082734Z">
+        <seg>不论命令以何种方式调用，命令均会设置ErrorLevel。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Commands() which returned ErrorLevel in previous v2 alphas now return !ErrorLevel (1 on success and 0 on failure), except for RunWait and SendMessage, which still return ErrorLevel.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T082544Z">
+        <seg>之前v2 alphas版本中Commands()返回ErrorLevel的情况，如今返回!ErrorLevel（1-成功，0-失败），除了RunWait与SendMessage，他们仍返回ErrorLevel。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>不确定。</note>
+      <tuv lang="EN-US">
+        <seg>Disallow methods with OnMessage to avoid confusion.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111725Z">
+        <seg>禁止OnMessage中使用方法做消息响应函数，以避免混乱。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Feed - Active Topics</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Fixed commands which don't set ErrorLevel at all to not return 1.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T100534Z">
+        <seg>修正那些不涉及ErrorLevel的命令，不再返回1。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Fixed output vars of built-in functions to not require percent signs when called with command syntax.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T083005Z">
+        <seg>修复内嵌函数的输出变量，以便在命令形式的调用中无需添加百分号。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Fixed x[1,2]+=y and %i-1%.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085438Z">
+        <seg>修正x[1,2]+=y与%i-1%。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For information about AutoHotkey v2, click the link above.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T073230Z">
+        <seg>关于AHK V2，见链接。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>For v2, the script must call ObjAddRef(pdsp) before ComObject(pdsp) if it does not "own" the reference (i.e. because the pointer will be released automatically, either when the wrapper object is released or immediately as a side-effect of querying for IDispatch within ComObject()).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111225Z">
+        <seg>V2中，若无别处"持有"关于pdsp的引用，则脚本须在ComObject(pdsp)前调用ObjAddRef(pdsp)（因为，当代理对象被释放时，或，作为ComObject()内部查询IDispatch时的副作用——即刻地，指针会被自动释放）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>不确定。</note>
+      <tuv lang="EN-US">
+        <seg>Hotkey no longer defaults to the script's bottommost #If/#IfWin.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111837Z">
+        <seg>Hotkey所设置的热键不再默认视为如同存于脚本最底端#If/#IfWin之后。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <note>不确定</note>
+      <tuv lang="EN-US">
+        <seg>Hotkey/hotstring threads default to the same criterion as the hotkey, so Hotkey, %A_ThisHotkey%, Off turns off the current hotkey even if it is context-sensitive.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T112139Z">
+        <seg>所设置的热键/热字串默认与当前热键的条件相同，故Hotkey, %A_ThisHotkey%, Off将关闭当前热键，即便它是上下文相关的。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>In particular:</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T080330Z">
+        <seg>需强调：</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Keywords contains and in are reserved for future use.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T075835Z">
+        <seg>contains及in为脚本保留的关键词。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Most v1 scripts which use ComObjEnwrap(pdsp) (within the first few pages of Google results) used it incorrectly; i.e. they did not release their own copy of the pointer.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T112358Z">
+        <seg>多数V1脚本中的ComObjEnwrap(pdsp)（摘自Google搜索中的前几页）是使用错误的；如，他们未释放自身对指针的引用副本。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>New operator is replaces if var is type.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T074755Z">
+        <seg>操作符is替换if var is type</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Removed "polymorphic" behaviour of ComObj...().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111334Z">
+        <seg>移除ComObj...()的"多态"行为。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Removed ComObjMissing().</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085234Z">
+        <seg>移除ComObjMissing()。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Removed ComObjUnwrap(obj) and ComObjTypo(obj,...).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T095229Z">
+        <seg>移除ComObjUnwrap(obj)与ComObjTypo(obj,...)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Renamed Args to A_Args and changed behaviour slightly.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T100810Z">
+        <seg>重命名Args为A_Args，并略微改变其行为。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Restored the #Persistent directive.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T100239Z">
+        <seg>恢复#Persistent指令。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See Command() in v2-changes for an overview of how this works.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T082823Z">
+        <seg>见V2变更文档中Command()部分。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>See Error Handling in v2-changes.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T080322Z">
+        <seg>V2变更文档中Error Handing（错误处理），</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Since type is a string, it must be enclosed in quote marks (or a variable) - for example, n is 'number'.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T075320Z">
+        <seg>type（类型）是字符串，故需置于引号中（或变量中）—如，n is 'number'。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Split ComObjActive() from ComObject() and changed "ownership" rules - see below.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111346Z">
+        <seg>从ComObject()中移出ComObjActive()，并改变"持有者关系" - 见后。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The flags parameter now only affects SafeArrays.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111306Z">
+        <seg>flags参数当前仅影响SafeArrays。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>The same type names are supported as before, plus object and byref.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T075418Z">
+        <seg>支持的类型名称新增object、byref。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>To write a standalone ternary, post-increment or post-decrement expression, either omit the space between the variable and the operator, or wrap the variable or expression in parentheses.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085222Z">
+        <seg>要使用三元操作符或后置自增操作符或后置自减操作符，可移除变量与操作符间的空格，或，使用圆括号包裹变量。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>Write two consecutive commas instead: x.y(a, , c) or p := [a, , c], x.y(p*).</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085405Z">
+        <seg>使用两个连续逗号取代，如x.y(a, , c)或p := [a, , c], x.y(p*)。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>abc</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T093304Z">
+        <seg>123</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>en-gb</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T020909Z">
+        <seg>en-2gb</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>no</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T031510Z">
+        <seg>no</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>v2.0-a045-bbf6f99</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085523Z">
+        <seg>v2.0-a045-bbf6f99</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>word ? x : y, word ++ and word -- are no longer expressions, since word can be a user-defined command.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T084804Z">
+        <seg>word ? x : y、word ++与word --不再是表达式，因为word可能为用户定义的命令。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>•DllCall and RegExMatch/Replace always throw exceptions instead of using ErrorLevel.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T080752Z">
+        <seg>DllCall与RegExMatch/Replace使用异常取代ErrorLevel。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>•Exceptions are thrown for more failure conditions within expression evaluation and object usage.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T081419Z">
+        <seg>表达式求值与对象使用中包含更多可能触发异常的条件检查。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>•If no args, assign an empty array so A_Args[1] doesn't cause an error.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111824Z">
+        <seg>如果脚本无参数，则赋值空数组，进而A_Args[1]不会致使错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>•Made it super-global so behaviour is like other built-in vars.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T101204Z">
+        <seg>作为超级全局变量，如同其他内置变量。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>•OnMessage throws on failure and returns an empty string if there was no previous function.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T081706Z">
+        <seg>OnMessage失败时抛出异常；若无消息处理函数，返回空字符串。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="EN-US">
+        <seg>•Wrapping commands in a try block no longer causes them to throw exceptions.</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T080807Z">
+        <seg>在try块内使用命令，不再致使异常。</seg>
+      </tuv>
+    </tu>
+<!-- Alternative translations -->
+    <tu>
+      <prop type="file">View topic - AutoHotkey v2 alpha • AHKScript.htm</prop>
+      <prop type="prev">en-gb</prop>
+      <prop type="next">en-gb</prop>
+      <note>123</note>
+      <tuv lang="EN-US">
+        <seg>en-gb</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T030019Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+    <tu>
+      <prop type="file">View topic - AutoHotkey v2 alpha • AHKScript.htm</prop>
+      <prop type="prev">en-gb</prop>
+      <prop type="next">no</prop>
+      <tuv lang="EN-US">
+        <seg>en-gb</seg>
+      </tuv>
+      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T020931Z">
+        <seg></seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>

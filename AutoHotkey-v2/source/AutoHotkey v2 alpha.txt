@@ -1,0 +1,33 @@
+﻿
+AutoHotkey v2
+
+For information about AutoHotkey v2, click the link above. A summary of changes will be posted here each time a new alpha is released.
+
+Changes from v1.1 to v2.0-a
+
+v2.0-a045-bbf6f99
+
+New operator is replaces if var is type. Since type is a string, it must be enclosed in quote marks (or a variable) - for example, n is 'number'. The same type names are supported as before, plus object and byref. Additionally x is y, where y is an object, checks if x derives from y, directly or indirectly.
+
+Keywords contains and in are reserved for future use.
+
+See Error Handling in v2-changes. In particular:
+
+•Wrapping commands in a try block no longer causes them to throw exceptions.
+•DllCall and RegExMatch/Replace always throw exceptions instead of using ErrorLevel.
+•Exceptions are thrown for more failure conditions within expression evaluation and object usage.
+•OnMessage throws on failure and returns an empty string if there was no previous function.
+
+Commands() which returned ErrorLevel in previous v2 alphas now return !ErrorLevel (1 on success and 0 on failure), except for RunWait and SendMessage, which still return ErrorLevel. Commands which set ErrorLevel now do so regardless of how they are called. See Command() in v2-changes for an overview of how this works.
+
+Fixed output vars of built-in functions to not require percent signs when called with command syntax.
+
+All WinSet' functions now return 1 on success, 0 on failure, while ErrorLevel is set to 0 on success, 1 on failure.
+
+word ? x : y, word ++ and word -- are no longer expressions, since word can be a user-defined command. To write a standalone ternary, post-increment or post-decrement expression, either omit the space between the variable and the operator, or wrap the variable or expression in parentheses.
+
+Removed ComObjMissing(). Write two consecutive commas instead: x.y(a, , c) or p := [a, , c], x.y(p*).
+
+Fixed x[1,2]+=y and %i-1%.
+
+

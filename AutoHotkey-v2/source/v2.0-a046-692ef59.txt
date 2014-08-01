@@ -1,0 +1,22 @@
+﻿v2.0-a046-692ef59
+
+Removed "polymorphic" behaviour of ComObj...().
+Split ComObjActive() from ComObject() and changed "ownership" rules - see below.
+Removed ComObjUnwrap(obj) and ComObjTypo(obj,...).
+Changed regex option `a to enable \R to match Unicode newlines.
+Disallow methods with OnMessage to avoid confusion.
+Restored the #Persistent directive.
+Changed float format string for better accuracy and to avoid truncation.
+Fixed commands which don't set ErrorLevel at all to not return 1.
+Changed FileOpen() error handling for consistency with other commands.
+
+Renamed Args to A_Args and changed behaviour slightly.
+
+•If no args, assign an empty array so A_Args[1] doesn't cause an error.
+•Made it super-global so behaviour is like other built-in vars.
+
+Hotkey no longer defaults to the script's bottommost #If/#IfWin. Hotkey/hotstring threads default to the same criterion as the hotkey, so Hotkey, %A_ThisHotkey%, Off turns off the current hotkey even if it is context-sensitive. All other threads default to the last setting used by the auto-execute section, which itself defaults to no criterion (global hotkeys).
+
+ComObject(pdsp), ComObject(9, pdsp) and ComObject(13, pdsp) no longer call AddRef by default; they default to "taking ownership" of the pointer. Most v1 scripts which use ComObjEnwrap(pdsp) (within the first few pages of Google results) used it incorrectly; i.e. they did not release their own copy of the pointer. For v2, the script must call ObjAddRef(pdsp) before ComObject(pdsp) if it does not "own" the reference (i.e. because the pointer will be released automatically, either when the wrapper object is released or immediately as a side-effect of querying for IDispatch within ComObject()). The flags parameter now only affects SafeArrays.
+
+
