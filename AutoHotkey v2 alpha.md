@@ -31,4 +31,30 @@
 
 修正`x[1,2]+=y`与`%i-1%`。
 
+---
 
+##v2.0-a046-692ef59
+
+移除`ComObj...()`的"多态"行为。
+从`ComObject()`中移出`ComObjActive()`，并改变"持有者关系" - 见后。
+移除`ComObjUnwrap(obj)`与`ComObjTypo(obj,...)`。
+改变正则选项``a`，使`\R`可匹配Unicode新行符。
+禁止`OnMessage`中使用方法做消息响应函数，以避免混乱。
+恢复`#Persistent`指令。
+完善浮点数格式的字符串，提升精度并避免被截短。
+修正那些不涉及`ErrorLevel`的命令，不再返回1。
+改变`FileOpen()`的错误处理方式至与其他命令一致。
+
+重命名`Args`为`A_Args`，并略微改变其行为。
+
+* 如果脚本无参数，则赋值空数组，进而`A_Args[1]`不会致使错误。
+* 作为超级全局变量，如同其他内置变量。
+
+`Hotkey`所设置的热键不再默认视为如同存于脚本最底端`#If`/`#IfWin`之后。
+所设置的热键/热字串默认与当前热键的条件相同，故`Hotkey, %A_ThisHotkey%, Off`将关闭当前热键，即便它是上下文相关的。
+其他线程默认为最近一次于自动执行段处的设置，默认为无限定条件（即全局热键）。
+
+`ComObject(pdsp)`、`ComObject(9, pdsp)`与`ComObject(13, pdsp)`默认不再调用`AddRef`；默认他们将作为指针的"持有者"。
+多数V1脚本中的`ComObjEnwrap(pdsp)`（摘自Google搜索中的前几页）是使用错误的；如，他们未释放自身对指针的引用副本。
+V2中，若无别处"持有"关于`pdsp`的引用，则脚本须在`ComObject(pdsp)`前调用`ObjAddRef(pdsp)`（因为，当代理对象被释放时，或，作为`ComObject()`内部查询IDispatch时的副作用——即刻地，指针会被自动释放）。
+`flags`参数当前仅作用于`SafeArrays`。
