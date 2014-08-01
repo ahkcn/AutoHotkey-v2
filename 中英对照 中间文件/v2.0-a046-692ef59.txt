@@ -1,0 +1,58 @@
+v2.0-a046-692ef59
+
+Removed "polymorphic" behaviour of ComObj...().
+移除ComObj...()的"多态"行为。
+
+Split ComObjActive() from ComObject() and changed "ownership" rules - see below.
+从ComObject()中移出ComObjActive()，并改变"持有者关系" - 见后。
+
+Removed ComObjUnwrap(obj) and ComObjTypo(obj,...).
+移除ComObjUnwrap(obj)与ComObjTypo(obj,...)。
+
+Changed regex option `a to enable \R to match Unicode newlines.
+改变正则选项`a，使\R可匹配Unicode新行符。
+
+Disallow methods with OnMessage to avoid confusion.
+禁止OnMessage中使用方法做消息响应函数，以避免混乱。
+
+Restored the #Persistent directive.
+恢复#Persistent指令。
+
+Changed float format string for better accuracy and to avoid truncation.
+完善浮点数格式的字符串，提升精度并避免被截短。
+
+Fixed commands which don't set ErrorLevel at all to not return 1.
+修正那些不涉及ErrorLevel的命令，不再返回1。
+
+Changed FileOpen() error handling for consistency with other commands.
+改变FileOpen()的错误处理方式至与其他命令一致。
+
+Renamed Args to A_Args and changed behaviour slightly.
+重命名Args为A_Args，并略微改变其行为。
+
+?If no args, assign an empty array so A_Args[1] doesn't cause an error.
+如果脚本无参数，则赋值空数组，进而A_Args[1]不会致使错误。
+
+?Made it super-global so behaviour is like other built-in vars.
+作为超级全局变量，如同其他内置变量。
+
+Hotkey no longer defaults to the script's bottommost #If/#IfWin.
+Hotkey所设置的热键不再默认视为如同存于脚本最底端#If/#IfWin之后。
+
+Hotkey/hotstring threads default to the same criterion as the hotkey, so Hotkey, %A_ThisHotkey%, Off turns off the current hotkey even if it is context-sensitive.
+所设置的热键/热字串默认与当前热键的条件相同，故Hotkey, %A_ThisHotkey%, Off将关闭当前热键，即便它是上下文相关的。
+
+All other threads default to the last setting used by the auto-execute section, which itself defaults to no criterion (global hotkeys).
+其他线程默认为最近一次于自动执行段处的设置，默认为无限定条件（即全局热键）。
+
+ComObject(pdsp), ComObject(9, pdsp) and ComObject(13, pdsp) no longer call AddRef by default; they default to "taking ownership" of the pointer.
+ComObject(pdsp)、ComObject(9, pdsp)与ComObject(13, pdsp)默认不再调用AddRef；默认他们将作为指针的"持有者"。
+
+Most v1 scripts which use ComObjEnwrap(pdsp) (within the first few pages of Google results) used it incorrectly; i.e. they did not release their own copy of the pointer.
+多数V1脚本中的ComObjEnwrap(pdsp)（摘自Google搜索中的前几页）是使用错误的；如，他们未释放自身对指针的引用副本。
+
+For v2, the script must call ObjAddRef(pdsp) before ComObject(pdsp) if it does not "own" the reference (i.e. because the pointer will be released automatically, either when the wrapper object is released or immediately as a side-effect of querying for IDispatch within ComObject()).
+V2中，若无别处"持有"关于pdsp的引用，则脚本须在ComObject(pdsp)前调用ObjAddRef(pdsp)（因为，当代理对象被释放时，或，作为ComObject()内部查询IDispatch时的副作用——即刻地，指针会被自动释放）。
+
+The flags parameter now only affects SafeArrays.
+flags参数当前仅影响SafeArrays。
