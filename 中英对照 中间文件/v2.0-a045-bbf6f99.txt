@@ -1,0 +1,64 @@
+v2.0-a045-bbf6f99
+
+New operator is replaces if var is type.
+操作符is替换if var is type
+
+Since type is a string, it must be enclosed in quote marks (or a variable) - for example, n is 'number'.
+type（类型）是字符串，故需置于引号中（或变量中）—如，n is 'number'。
+
+The same type names are supported as before, plus object and byref.
+支持的类型名称新增object、byref。
+
+Additionally x is y, where y is an object, checks if x derives from y, directly or indirectly.
+此外，对x is y，当y是对象时，检测x是否派生自y，不论直接或间接。
+
+Keywords contains and in are reserved for future use.
+contains及in为脚本保留的关键词。
+
+See Error Handling in v2-changes.
+V2变更文档中Error Handing（错误处理），
+
+In particular:
+需强调：
+
+?Wrapping commands in a try block no longer causes them to throw exceptions.
+在try块内使用命令，不再致使异常。
+
+?DllCall and RegExMatch/Replace always throw exceptions instead of using ErrorLevel.
+DllCall与RegExMatch/Replace使用异常取代ErrorLevel。
+
+?Exceptions are thrown for more failure conditions within expression evaluation and object usage.
+表达式求值与对象使用中包含更多可能触发异常的条件检查。
+
+?OnMessage throws on failure and returns an empty string if there was no previous function.
+OnMessage失败时抛出异常；若无消息处理函数，返回空字符串。
+
+Commands() which returned ErrorLevel in previous v2 alphas now return !ErrorLevel (1 on success and 0 on failure), except for RunWait and SendMessage, which still return ErrorLevel.
+之前v2 alphas版本中Commands()返回ErrorLevel的情况，如今返回!ErrorLevel（1-成功，0-失败），除了RunWait与SendMessage，他们仍返回ErrorLevel。
+
+Commands which set ErrorLevel now do so regardless of how they are called.
+不论命令以何种方式调用，命令均会设置ErrorLevel。
+
+See Command() in v2-changes for an overview of how this works.
+见V2变更文档中Command()部分。
+
+Fixed output vars of built-in functions to not require percent signs when called with command syntax.
+修复内嵌函数的输出变量，以便在命令形式的调用中无需添加百分号。
+
+All WinSet' functions now return 1 on success, 0 on failure, while ErrorLevel is set to 0 on success, 1 on failure.
+所以的WinSet函数成功时返回1，失败时返回0，同时，ErrorLevel成功时为0，失败时为1。
+
+word ? x : y, word ++ and word -- are no longer expressions, since word can be a user-defined command.
+word ? x : y、word ++与word --不再是表达式，因为word可能为用户定义的命令。
+
+To write a standalone ternary, post-increment or post-decrement expression, either omit the space between the variable and the operator, or wrap the variable or expression in parentheses.
+要使用三元操作符或后置自增操作符或后置自减操作符，可移除变量与操作符间的空格，或，使用圆括号包裹变量。
+
+Removed ComObjMissing().
+移除ComObjMissing()。
+
+Write two consecutive commas instead: x.y(a, , c) or p := [a, , c], x.y(p*).
+使用两个连续逗号取代，如x.y(a, , c)或p := [a, , c], x.y(p*)。
+
+Fixed x[1,2]+=y and %i-1%.
+修正x[1,2]+=y与%i-1%。

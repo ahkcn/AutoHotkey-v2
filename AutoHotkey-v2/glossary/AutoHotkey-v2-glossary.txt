@@ -1,0 +1,32 @@
+operator	操作符
+if var is type	if var is type
+type	type	类型
+object	object	对象
+byref	byref	引用
+Additionally	此外
+derives from	派生自
+contains	contains
+in	in
+DllCall	DllCall
+RegExMatch	RegExMatch
+Replace	Replace
+ErrorLevel	ErrorLevel
+expression evaluation	表达式求值	expression evaluation
+object	对象
+OnMessage	OnMessage
+empty string	空字符串
+Commands()	Commands()
+RunWait	RunWait
+SendMessage	SendMessage
+output vars	output vars	输出变量
+ternary	三元操作符
+post-increment	后置自增操作符
+post-decrement	后置自减操作符
+Args	Args	脚本接收的参数的集合（AHK内置变量）
+A_Args	A_Args	脚本接收的参数的集合（AHK内置变量）
+Hotkey	Hotkey
+hotstring	热字串
+auto-execute section	自动执行段
+criterion	条件	出自WinTitle参数的Multiple Criteria/多重条件。
+RegExMatch	RegExMatch	正则查找
+RegExReplace	RegExReplace	正则替换
