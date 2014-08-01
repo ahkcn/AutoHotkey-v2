@@ -6,7 +6,6 @@
 <!-- Default translations -->
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>?All args are text by default.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T134049Z">
@@ -111,8 +110,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>A summary of changes will be posted here each time a new alpha is released.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T092824Z">
@@ -121,7 +118,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>Added capability to call methods with command syntax:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T133815Z">
@@ -130,8 +126,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>Additionally x is y, where y is an object, checks if x derives from y, directly or indirectly.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T092833Z">
@@ -148,7 +142,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>All built-in methods of Objects and SafeArrays no longer support the _ (underscore) prefix, except _NewEnum, which now requires it (for compatibility with COM objects).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T131626Z">
@@ -157,8 +150,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>All other threads default to the last setting used by the auto-execute section, which itself defaults to no criterion (global hotkeys).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T112208Z">
@@ -175,7 +166,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>Changed &amp;(var:=1) to return var's 64-bit number buffer instead of its string buffer.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T130354Z">
@@ -184,8 +174,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>Changed FileOpen() error handling for consistency with other commands.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T100640Z">
@@ -194,7 +182,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>Changed RegExMatch/RegExReplace to throw on PCRE execution errors.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T130242Z">
@@ -203,8 +190,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>Changed float format string for better accuracy and to avoid truncation.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111735Z">
@@ -213,7 +198,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>Changed objects to treat numeric string keys as strings, not integers.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T130417Z">
@@ -222,8 +206,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>Changed regex option `a to enable \R to match Unicode newlines.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T095325Z">
@@ -263,7 +245,6 @@
       </tuv>
     </tu>
     <tu>
-<<<<<<< HEAD
       <tuv lang="EN-US">
         <seg>Count (return value) includes only elements which actually existed within the array.</seg>
       </tuv>
@@ -272,8 +253,6 @@
       </tuv>
     </tu>
     <tu>
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
       <note>不确定。</note>
       <tuv lang="EN-US">
         <seg>Disallow methods with OnMessage to avoid confusion.</seg>
@@ -289,7 +268,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>Fixed 'co', 'con', 'contain', etc. to not be reserved in expressions.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T125552Z">
@@ -298,8 +276,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>Fixed commands which don't set ErrorLevel at all to not return 1.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T100534Z">
@@ -316,7 +292,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>Fixed passing of objects and numbers to functions via command syntax.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T133749Z">
@@ -325,8 +300,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>Fixed x[1,2]+=y and %i-1%.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085438Z">
@@ -369,7 +342,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>Improved Click to support function syntax better - Click(x, y).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T130118Z">
@@ -378,8 +350,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>In particular:</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T080330Z">
@@ -396,7 +366,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>Merged v1.1.14.04.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T125605Z">
@@ -405,8 +374,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>Most v1 scripts which use ComObjEnwrap(pdsp) (within the first few pages of Google results) used it incorrectly; i.e. they did not release their own copy of the pointer.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T112358Z">
@@ -423,7 +390,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>ObjNewEnum(x) is still equivalent to x._NewEnum() for Objects.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T131703Z">
@@ -457,8 +423,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>Removed "polymorphic" behaviour of ComObj...().</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111334Z">
@@ -547,7 +511,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>To remove common points of confusion related to the dual nature of Objects (as associative arrays which can be used like linear arrays), the methods Insert and Remove have been split into the following (where Object, Array and Stack are all simply objects):</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132030Z">
@@ -556,8 +519,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>To write a standalone ternary, post-increment or post-decrement expression, either omit the space between the variable and the operator, or wrap the variable or expression in parentheses.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085222Z">
@@ -566,7 +527,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-<<<<<<< HEAD
         <seg>Unlike v1, does not affect any of the remaining keys.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132218Z">
@@ -583,8 +543,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
         <seg>Write two consecutive commas instead: x.y(a, , c) or p := [a, , c], x.y(p*).</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085405Z">

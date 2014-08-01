@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 operator	操作符
-=======
-﻿operator	操作符
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
 if var is type	if var is type
 type	type	类型
 object	object	对象
@@ -32,8 +28,5 @@ Hotkey	Hotkey
 hotstring	热字串
 auto-execute section	自动执行段
 criterion	条件	出自WinTitle参数的Multiple Criteria/多重条件。
-<<<<<<< HEAD
 RegExMatch	RegExMatch	正则查找
 RegExReplace	RegExReplace	正则替换
-=======
->>>>>>> 4a11cd4ff7d6829dd4cc44087149c712b870e446
