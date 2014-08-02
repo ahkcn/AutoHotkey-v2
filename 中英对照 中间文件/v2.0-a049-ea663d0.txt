@@ -1,0 +1,73 @@
+v2.0-a049-ea663d0
+
+All built-in methods of Objects and SafeArrays no longer support the _ (underscore) prefix, except _NewEnum, which now requires it (for compatibility with COM objects).
+Objects（对象）与SafeArrays的内置方法不再支持_（下划线）前缀，除了_NewEnum（因为COM对象的兼容性需要）。
+
+ObjNewEnum(x) is still equivalent to x._NewEnum() for Objects.
+ObjNewEnum(x)仍等效x._NewEnum()。
+
+To remove common points of confusion related to the dual nature of Objects (as associative arrays which can be used like linear arrays), the methods Insert and Remove have been split into the following (where Object, Array and Stack are all simply objects):
+为了解决关于对象双重性的混乱（如，关联数组可作线性数组使用），方法Insert与Remove分为以下（其中Object、Array及Stack均为对象）：
+
+Value := Object.Remove(Key): Remove Key and return its prior value.
+Value := Object.Remove(Key)：移除Key（键），返回他对应的值。
+
+Count := Object.Remove(FirstKey, LastKey): Remove a range of keys and return the number of actual key-value pairs removed.
+Count := Object.Remove(FirstKey, LastKey)：移除关于键的范围，返回实际移除的键值对的数量。
+
+Unlike v1, does not affect any of the remaining keys.
+与v1不同，不影响其他键。
+
+Array.InsertAt(Index, Value1, ...): Insert one or more values at the given position.
+Array.InsertAt(Index, Value1, ...)：在指定位置插入一个或多个值。
+
+Value := Array.RemoveAt(Index): Remove and return the array element at Index.
+Value := Array.RemoveAt(Index)：移除并返回数组索引（Index）处的元素。
+
+Count := Array.RemoveAt(Index, vCount): Remove all array elements from Index to Index+vCount-1.
+Count := Array.RemoveAt(Index, vCount)：移除所有自索引（Index）至索引+vCount-1范围内的数组元素。
+
+Count (return value) includes only elements which actually existed within the array.
+返回值Count（数量）为数组中实际存在的元素。
+
+Stack.Push(Value1, ...): Insert one or more values at the end of the array.
+Stack.Push(Value1, ...)：在数组末尾插入一个或多个值。
+
+Value := Stack.Pop(): Remove and return the last array element.
+Value := Stack.Pop()：移除并返回最后一个数组（栈）元素。
+
+Built-in functions equivalent to each method also exist; e.g. ObjPop(Stack).
+仍存在等效于内置函数的方法；如，ObjPop(Stack)。
+
+ObjRawSet(Object, Key, Value): Assigns a value to the object, bypassing any meta-functions.
+ObjRawSet(Object, Key, Value)：赋值到对象，跳过任何元方法。
+
+Object.MaxIndex() has been changed to Object.Length() (or Object.Length) and now returns 0 if there are no integer keys, to make it easier to use.
+Object.MaxIndex()变为Object.Length()（或Object.Length），当无整数键时返回0。
+
+Object.MinIndex() has been removed, since it was the rarely used counterpart of MaxIndex.
+移除Object.MinIndex()，较MaxIndex其极少使用。
+
+A for-loop can be used to find the lowest key.
+可用for-loop（循环）查找最小键。
+
+Parameter count validation and out-of-memory handling in Object methods has been brought in line with the majority of built-in functions.
+对象方法中的参数数量检测及内存耗尽响应按照其他函数那样处理。（将在运行时提示错误）
+
+Fixed passing of objects and numbers to functions via command syntax.
+修正使用命令语法传递对象与数字到函数的错误。
+
+Added capability to call methods with command syntax:
+支持使用命令语法调用方法：
+
+In place of the command name, write the target object and method name separated by a dot.
+命令名处，使用对象与句点连接的方法。
+
+Var.Method and Var.Property.Method are both acceptable, but anything more complex (such as Var[x].Method or %Var%.Method) is not supported.
+Var.Method即Var.Property.Method均可，但更复杂的情况（如 Var[x].Method或%Var%.Method）不可。
+
+The return value is always discarded; there is no output variable.
+返回值被丢弃；没有输出变量。
+
+All args are text by default.
+所有的参数默认为文本字符串。

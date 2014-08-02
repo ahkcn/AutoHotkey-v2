@@ -1,0 +1,13 @@
+v2.0-a048-573f142
+
+Improved Click to support function syntax better - Click(x, y).
+增强Click，使支持函数语法 - Click(x, y)。
+
+Changed RegExMatch/RegExReplace to throw on PCRE execution errors.
+改变，RegExMatch / RegExReplace在PCRE执行错误时，抛出异常。
+
+Changed &(var:=1) to return var's 64-bit number buffer instead of its string buffer.
+改变，&(var:=1)返回变量的64位数值缓存，而非字符串缓存。
+
+Changed objects to treat numeric string keys as strings, not integers.
+改变，对象处理数值字符串为字符串，而非数值。

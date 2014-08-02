@@ -68,7 +68,7 @@ V2中，若无别处"持有"关于`pdsp`的引用，则脚本须在`ComObject(pd
 合并v1.1.14.04。
 
 ---
-v2.0-a048-573f142
+##v2.0-a048-573f142
 
 增强Click，使支持函数语法 - `Click(x, y)`。	
 改变，`RegExMatch` / `RegExReplace`在PCRE执行错误时，抛出异常。	

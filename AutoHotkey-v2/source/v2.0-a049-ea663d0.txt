@@ -1,0 +1,29 @@
+v2.0-a049-ea663d0
+
+All built-in methods of Objects and SafeArrays no longer support the _ (underscore) prefix, except _NewEnum, which now requires it (for compatibility with COM objects). ObjNewEnum(x) is still equivalent to x._NewEnum() for Objects.
+
+To remove common points of confusion related to the dual nature of Objects (as associative arrays which can be used like linear arrays), the methods Insert and Remove have been split into the following (where Object, Array and Stack are all simply objects):
+
+Value := Object.Remove(Key): Remove Key and return its prior value.
+Count := Object.Remove(FirstKey, LastKey): Remove a range of keys and return the number of actual key-value pairs removed. Unlike v1, does not affect any of the remaining keys.
+Array.InsertAt(Index, Value1, ...): Insert one or more values at the given position.
+Value := Array.RemoveAt(Index): Remove and return the array element at Index.
+Count := Array.RemoveAt(Index, vCount): Remove all array elements from Index to Index+vCount-1. Count (return value) includes only elements which actually existed within the array.
+Stack.Push(Value1, ...): Insert one or more values at the end of the array.
+Value := Stack.Pop(): Remove and return the last array element.
+Built-in functions equivalent to each method also exist; e.g. ObjPop(Stack).
+ObjRawSet(Object, Key, Value): Assigns a value to the object, bypassing any meta-functions.
+
+Object.MaxIndex() has been changed to Object.Length() (or Object.Length) and now returns 0 if there are no integer keys, to make it easier to use. 
+
+Object.MinIndex() has been removed, since it was the rarely used counterpart of MaxIndex. A for-loop can be used to find the lowest key.
+
+Parameter count validation and out-of-memory handling in Object methods has been brought in line with the majority of built-in functions.
+
+Fixed passing of objects and numbers to functions via command syntax.
+
+Added capability to call methods with command syntax:
+
+In place of the command name, write the target object and method name separated by a dot. Var.Method and Var.Property.Method are both acceptable, but anything more complex (such as Var[x].Method or %Var%.Method) is not supported.
+The return value is always discarded; there is no output variable.
+All args are text by default.
