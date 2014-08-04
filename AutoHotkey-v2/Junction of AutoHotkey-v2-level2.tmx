@@ -1,761 +1,613 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE tmx SYSTEM "tmx11.dtd">
-<tmx version="1.1">
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
   <header creationtool="OmegaT" o-tmf="OmegaT TMX" adminlang="EN-US" datatype="plaintext" creationtoolversion="2.6.3_10" segtype="sentence" srclang="EN-US"/>
   <body>
 <!-- Default translations -->
     <tu>
-      <tuv lang="EN-US">
-        <seg>?All args are text by default.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T134049Z">
-        <seg>所有的参数默认为文本字符串。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Array.InsertAt(Index, Value1, ...): Insert one or more values at the given position.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132236Z">
-        <seg>?Array.InsertAt(Index, Value1, ...)：在指定位置插入一个或多个值。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Built-in functions equivalent to each method also exist; e.g. ObjPop(Stack).</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132735Z">
-        <seg>仍存在等效于内置函数的方法；如，ObjPop(Stack)。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Count := Array.RemoveAt(Index, vCount): Remove all array elements from Index to Index+vCount-1.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132429Z">
-        <seg>Count := Array.RemoveAt(Index, vCount)：移除所有自索引（Index）至索引+vCount-1范围内的数组元素。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Count := Object.Remove(FirstKey, LastKey): Remove a range of keys and return the number of actual key-value pairs removed.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132157Z">
-        <seg>?Count := Object.Remove(FirstKey, LastKey)：移除关于键的范围，返回实际移除的键值对的数量。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?In place of the command name, write the target object and method name separated by a dot.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T133949Z">
-        <seg>命令名处，使用对象与句点连接的方法。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?ObjRawSet(Object, Key, Value): Assigns a value to the object, bypassing any meta-functions.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132808Z">
-        <seg>ObjRawSet(Object, Key, Value)：赋值到对象，跳过任何元方法。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Stack.Push(Value1, ...): Insert one or more values at the end of the array.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132612Z">
-        <seg>Stack.Push(Value1, ...)：在数组末尾插入一个或多个值。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?The return value is always discarded; there is no output variable.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T134014Z">
-        <seg>返回值被丢弃；没有输出变量。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Value := Array.RemoveAt(Index): Remove and return the array element at Index.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132338Z">
-        <seg>?Value := Array.RemoveAt(Index)：移除并返回数组索引（Index）处的元素。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Value := Object.Remove(Key): Remove Key and return its prior value.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132122Z">
-        <seg>?Value := Object.Remove(Key)：移除Key（键），返回他对应的值。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Value := Stack.Pop(): Remove and return the last array element.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132636Z">
-        <seg>Value := Stack.Pop()：移除并返回最后一个数组（栈）元素。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>A for-loop can be used to find the lowest key.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132952Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T132952Z">
         <seg>可用for-loop（循环）查找最小键。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>A summary of changes will be posted here each time a new alpha is released.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T092824Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T092824Z">
         <seg>每次的变更记录会追加到本主题</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Added capability to call methods with command syntax:</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T133815Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T133815Z">
         <seg>支持使用命令语法调用方法：</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Additionally x is y, where y is an object, checks if x derives from y, directly or indirectly.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T092833Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T092833Z">
         <seg>此外，对x is y，当y是对象时，检测x是否派生自y，不论直接或间接。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>All WinSet' functions now return 1 on success, 0 on failure, while ErrorLevel is set to 0 on success, 1 on failure.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140804T144207Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140804T144207Z">
         <seg>所有的WinSet函数成功时返回1，失败时返回0，同时，ErrorLevel成功时为0，失败时为1。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>All args are text by default.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145834Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145834Z">
         <seg>所有的参数默认为文本字符串。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>All built-in methods of Objects and SafeArrays no longer support the _ (underscore) prefix, except _NewEnum, which now requires it (for compatibility with COM objects).</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T131626Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T131626Z">
         <seg>Objects（对象）与SafeArrays的内置方法不再支持_（下划线）前缀，除了_NewEnum（因为COM对象的兼容性需要）。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>All other threads default to the last setting used by the auto-execute section, which itself defaults to no criterion (global hotkeys).</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T112208Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T112208Z">
         <seg>其他线程默认为最近一次于自动执行段处的设置，默认为无限定条件（即全局热键）。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Array.InsertAt(Index, Value1, ...): Insert one or more values at the given position.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145803Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145803Z">
         <seg>Array.InsertAt(Index, Value1, ...)：在指定位置插入一个或多个值。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>AutoHotkey v2</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085458Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T085458Z">
         <seg></seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Built-in functions equivalent to each method also exist; e.g. ObjPop(Stack).</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145817Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145817Z">
         <seg>仍存在等效于内置函数的方法；如，ObjPop(Stack)。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Changed &amp;(var:=1) to return var's 64-bit number buffer instead of its string buffer.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T130354Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T130354Z">
         <seg>改变，&amp;(var:=1)返回变量的64位数值缓存，而非字符串缓存。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Changed FileOpen() error handling for consistency with other commands.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T100640Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T100640Z">
         <seg>改变FileOpen()的错误处理方式至与其他命令一致。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Changed RegExMatch/RegExReplace to throw on PCRE execution errors.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T130242Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T130242Z">
         <seg>改变，RegExMatch / RegExReplace在PCRE执行错误时，抛出异常。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Changed float format string for better accuracy and to avoid truncation.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111735Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T111735Z">
         <seg>完善浮点数格式的字符串，提升精度并避免被截短。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Changed objects to treat numeric string keys as strings, not integers.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T130417Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T130417Z">
         <seg>改变，对象处理数值字符串为字符串，而非数值。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Changed regex option `a to enable \R to match Unicode newlines.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T095325Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T095325Z">
         <seg>改变正则选项`a，使\R可匹配Unicode新行符。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Changes from v1.1 to v2.0-a</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T073408Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T073408Z">
         <seg>V1.1自V2.0-a的变更文档</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>ComObject(pdsp), ComObject(9, pdsp) and ComObject(13, pdsp) no longer call AddRef by default; they default to "taking ownership" of the pointer.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T105522Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T105522Z">
         <seg>ComObject(pdsp)、ComObject(9, pdsp)与ComObject(13, pdsp)默认不再调用AddRef；默认他们将作为指针的"持有者"。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Commands which set ErrorLevel now do so regardless of how they are called.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T082734Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T082734Z">
         <seg>不论命令以何种方式调用，命令均会设置ErrorLevel。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Commands() which returned ErrorLevel in previous v2 alphas now return !ErrorLevel (1 on success and 0 on failure), except for RunWait and SendMessage, which still return ErrorLevel.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140804T143933Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140804T143933Z">
         <seg>之前v2 alphas版本中Commands()返回ErrorLevel的情况，如今返回!ErrorLevel（1-成功，0-失败），除RunWait与SendMessage外，他们仍返回ErrorLevel。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Count (return value) includes only elements which actually existed within the array.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132553Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T132553Z">
         <seg>返回值Count（数量）为数组中实际存在的元素。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Count := Array.RemoveAt(Index, vCount): Remove all array elements from Index to Index+vCount-1.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145810Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145810Z">
         <seg>Count := Array.RemoveAt(Index, vCount)：移除所有自索引（Index）至索引+vCount-1范围内的数组元素。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Count := Object.Remove(FirstKey, LastKey): Remove a range of keys and return the number of actual key-value pairs removed.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145800Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145800Z">
         <seg>Count := Object.Remove(FirstKey, LastKey)：移除关于键的范围，返回实际移除的键值对的数量。</seg>
       </tuv>
     </tu>
     <tu>
       <note>不确定。</note>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Disallow methods with OnMessage to avoid confusion.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111725Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T111725Z">
         <seg>禁止OnMessage中使用方法做消息响应函数，以避免混乱。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
-        <seg>Feed - Active Topics</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Fixed 'co', 'con', 'contain', etc. to not be reserved in expressions.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T125552Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T125552Z">
         <seg>修正'co'、'con'、'contain'等，不作为表达式的保留字。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Fixed commands which don't set ErrorLevel at all to not return 1.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T100534Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T100534Z">
         <seg>修正那些不涉及ErrorLevel的命令，不再返回1。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Fixed output vars of built-in functions to not require percent signs when called with command syntax.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140804T143953Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140804T143953Z">
         <seg>修复内嵌函数的输出变量，以便在命令调用方式中无需再为其添加百分号。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Fixed passing of objects and numbers to functions via command syntax.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T133749Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T133749Z">
         <seg>修正使用命令语法传递对象与数字到函数的错误。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Fixed x[1,2]+=y and %i-1%.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085438Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T085438Z">
         <seg>修正x[1,2]+=y与%i-1%。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>For information about AutoHotkey v2, click the link above.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T073230Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T073230Z">
         <seg>关于AHK V2，见链接。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>For v2, the script must call ObjAddRef(pdsp) before ComObject(pdsp) if it does not "own" the reference (i.e. because the pointer will be released automatically, either when the wrapper object is released or immediately as a side-effect of querying for IDispatch within ComObject()).</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111225Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T111225Z">
         <seg>V2中，若无别处"持有"关于pdsp的引用，则脚本须在ComObject(pdsp)前调用ObjAddRef(pdsp)（因为，当代理对象被释放时，或，作为ComObject()内部查询IDispatch时的副作用——即刻地，指针会被自动释放）。</seg>
       </tuv>
     </tu>
     <tu>
       <note>不确定。</note>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Hotkey no longer defaults to the script's bottommost #If/#IfWin.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111837Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T111837Z">
         <seg>Hotkey所设置的热键不再默认视为如同存于脚本最底端#If/#IfWin之后。</seg>
       </tuv>
     </tu>
     <tu>
       <note>不确定</note>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Hotkey/hotstring threads default to the same criterion as the hotkey, so Hotkey, %A_ThisHotkey%, Off turns off the current hotkey even if it is context-sensitive.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T112139Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T112139Z">
         <seg>所设置的热键/热字串默认与当前热键的条件相同，故Hotkey, %A_ThisHotkey%, Off将关闭当前热键，即便它是上下文相关的。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Improved Click to support function syntax better - Click(x, y).</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T130118Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T130118Z">
         <seg>增强Click，使支持函数语法 - Click(x, y)。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>In particular:</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T080330Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T080330Z">
         <seg>需强调：</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>In place of the command name, write the target object and method name separated by a dot.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145824Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145824Z">
         <seg>命令名处，使用对象与句点连接的方法。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Keywords contains and in are reserved for future use.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T075835Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T075835Z">
         <seg>contains及in为脚本保留的关键词。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Merged v1.1.14.04.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T125605Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T125605Z">
         <seg>合并v1.1.14.04。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Most v1 scripts which use ComObjEnwrap(pdsp) (within the first few pages of Google results) used it incorrectly; i.e. they did not release their own copy of the pointer.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T112358Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T112358Z">
         <seg>多数V1脚本中的ComObjEnwrap(pdsp)（摘自Google搜索中的前几页）是使用错误的；如，他们未释放自身对指针的引用副本。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>New operator is replaces if var is type.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140804T143759Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140804T143759Z">
         <seg>操作符is替换掉if var is type。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>ObjNewEnum(x) is still equivalent to x._NewEnum() for Objects.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T131703Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T131703Z">
         <seg>ObjNewEnum(x)仍等效x._NewEnum()。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>ObjRawSet(Object, Key, Value): Assigns a value to the object, bypassing any meta-functions.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145818Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145818Z">
         <seg>ObjRawSet(Object, Key, Value)：赋值到对象，跳过任何元方法。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Object.MaxIndex() has been changed to Object.Length() (or Object.Length) and now returns 0 if there are no integer keys, to make it easier to use.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132850Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T132850Z">
         <seg>Object.MaxIndex()变为Object.Length()（或Object.Length），当无整数键时返回0。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Object.MinIndex() has been removed, since it was the rarely used counterpart of MaxIndex.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132930Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T132930Z">
         <seg>移除Object.MinIndex()，较MaxIndex其极少使用。</seg>
       </tuv>
     </tu>
     <tu>
       <note>不确定。</note>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Parameter count validation and out-of-memory handling in Object methods has been brought in line with the majority of built-in functions.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T133624Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T133624Z">
         <seg>对象方法中的参数数量检测及内存耗尽响应按照其他函数那样处理。（将在运行时提示错误）</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Removed "polymorphic" behaviour of ComObj...().</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111334Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T111334Z">
         <seg>移除ComObj...()的"多态"行为。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Removed ComObjMissing().</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085234Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T085234Z">
         <seg>移除ComObjMissing()。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Removed ComObjUnwrap(obj) and ComObjTypo(obj,...).</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T095229Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T095229Z">
         <seg>移除ComObjUnwrap(obj)与ComObjTypo(obj,...)。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Renamed Args to A_Args and changed behaviour slightly.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T100810Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T100810Z">
         <seg>重命名Args为A_Args，并略微改变其行为。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Restored the #Persistent directive.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T100239Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T100239Z">
         <seg>恢复#Persistent指令。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>See Command() in v2-changes for an overview of how this works.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T082823Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T082823Z">
         <seg>见V2变更文档中Command()部分。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>See Error Handling in v2-changes.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T080322Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T080322Z">
         <seg>V2变更文档中Error Handing（错误处理），</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Since type is a string, it must be enclosed in quote marks (or a variable) - for example, n is 'number'.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140804T143859Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140804T143859Z">
         <seg>type（类型）的值是字符串，故需置于引号中（或变量中）—如，n is 'number'。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Split ComObjActive() from ComObject() and changed "ownership" rules - see below.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111346Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T111346Z">
         <seg>从ComObject()中移出ComObjActive()，并改变"持有者关系" - 见后。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Stack.Push(Value1, ...): Insert one or more values at the end of the array.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145815Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145815Z">
         <seg>Stack.Push(Value1, ...)：在数组末尾插入一个或多个值。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>The flags parameter now only affects SafeArrays.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111306Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T111306Z">
         <seg>flags参数当前仅影响SafeArrays。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>The return value is always discarded; there is no output variable.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145828Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145828Z">
         <seg>返回值被丢弃；没有输出变量。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>The same type names are supported as before, plus object and byref.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T075418Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T075418Z">
         <seg>支持的类型名称新增object、byref。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>To remove common points of confusion related to the dual nature of Objects (as associative arrays which can be used like linear arrays), the methods Insert and Remove have been split into the following (where Object, Array and Stack are all simply objects):</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140804T144229Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140804T144229Z">
         <seg>为了解决关于对象双重性的混乱（如，关联数组可作线性数组使用），方法Insert与Remove拆分如下（其中Object、Array及Stack均为对象）：</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>To write a standalone ternary, post-increment or post-decrement expression, either omit the space between the variable and the operator, or wrap the variable or expression in parentheses.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085222Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T085222Z">
         <seg>要使用三元操作符或后置自增操作符或后置自减操作符，可移除变量与操作符间的空格，或，使用圆括号包裹变量。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Unlike v1, does not affect any of the remaining keys.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132218Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T132218Z">
         <seg>与v1不同，不影响其他键。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Value := Array.RemoveAt(Index): Remove and return the array element at Index.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145804Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145804Z">
         <seg>Value := Array.RemoveAt(Index)：移除并返回数组索引（Index）处的元素。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Value := Object.Remove(Key): Remove Key and return its prior value.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145757Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145757Z">
         <seg>Value := Object.Remove(Key)：移除Key（键），返回他对应的值。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Value := Stack.Pop(): Remove and return the last array element.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140802T145816Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140802T145816Z">
         <seg>Value := Stack.Pop()：移除并返回最后一个数组（栈）元素。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Var.Method and Var.Property.Method are both acceptable, but anything more complex (such as Var[x].Method or %Var%.Method) is not supported.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T134000Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T134000Z">
         <seg>Var.Method即Var.Property.Method均可，但更复杂的情况（如 Var[x].Method或%Var%.Method）不可。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>Write two consecutive commas instead: x.y(a, , c) or p := [a, , c], x.y(p*).</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085405Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T085405Z">
         <seg>使用两个连续逗号取代，如x.y(a, , c)或p := [a, , c], x.y(p*)。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
-        <seg>abc</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T093304Z">
-        <seg>123</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>en-gb</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T020909Z">
-        <seg>en-2gb</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>no</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T031510Z">
-        <seg>no</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>v2.0-a045-bbf6f99</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085523Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T085523Z">
         <seg>v2.0-a045-bbf6f99</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>word ? x : y, word ++ and word -- are no longer expressions, since word can be a user-defined command.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T084804Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T084804Z">
         <seg>word ? x : y、word ++与word --不再是表达式，因为word可能为用户定义的命令。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>•DllCall and RegExMatch/Replace always throw exceptions instead of using ErrorLevel.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T080752Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T080752Z">
         <seg>DllCall与RegExMatch/Replace使用异常取代ErrorLevel。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>•Exceptions are thrown for more failure conditions within expression evaluation and object usage.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T081419Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T081419Z">
         <seg>表达式求值与对象使用中包含更多可能触发异常的条件检查。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>•If no args, assign an empty array so A_Args[1] doesn't cause an error.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111824Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T111824Z">
         <seg>如果脚本无参数，则赋值空数组，进而A_Args[1]不会致使错误。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>•Made it super-global so behaviour is like other built-in vars.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T101204Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T101204Z">
         <seg>作为超级全局变量，如同其他内置变量。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>•OnMessage throws on failure and returns an empty string if there was no previous function.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T081706Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T081706Z">
         <seg>OnMessage失败时抛出异常；若无消息处理函数，返回空字符串。</seg>
       </tuv>
     </tu>
     <tu>
-      <tuv lang="EN-US">
+      <tuv xml:lang="EN-US">
         <seg>•Wrapping commands in a try block no longer causes them to throw exceptions.</seg>
       </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T080807Z">
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T080807Z">
         <seg>在try块内使用命令，不再致使异常。</seg>
       </tuv>
     </tu>
 <!-- Alternative translations -->
-    <tu>
-      <prop type="file">View topic - AutoHotkey v2 alpha • AHKScript.htm</prop>
-      <prop type="prev">en-gb</prop>
-      <prop type="next">en-gb</prop>
-      <note>123</note>
-      <tuv lang="EN-US">
-        <seg>en-gb</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T030019Z">
-        <seg></seg>
-      </tuv>
-    </tu>
-    <tu>
-      <prop type="file">View topic - AutoHotkey v2 alpha • AHKScript.htm</prop>
-      <prop type="prev">en-gb</prop>
-      <prop type="next">no</prop>
-      <tuv lang="EN-US">
-        <seg>en-gb</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T020931Z">
-        <seg></seg>
-      </tuv>
-    </tu>
   </body>
 </tmx>

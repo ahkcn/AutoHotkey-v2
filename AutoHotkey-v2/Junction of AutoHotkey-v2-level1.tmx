@@ -6,102 +6,6 @@
 <!-- Default translations -->
     <tu>
       <tuv lang="EN-US">
-        <seg>?All args are text by default.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T134049Z">
-        <seg>所有的参数默认为文本字符串。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Array.InsertAt(Index, Value1, ...): Insert one or more values at the given position.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132236Z">
-        <seg>?Array.InsertAt(Index, Value1, ...)：在指定位置插入一个或多个值。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Built-in functions equivalent to each method also exist; e.g. ObjPop(Stack).</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132735Z">
-        <seg>仍存在等效于内置函数的方法；如，ObjPop(Stack)。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Count := Array.RemoveAt(Index, vCount): Remove all array elements from Index to Index+vCount-1.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132429Z">
-        <seg>Count := Array.RemoveAt(Index, vCount)：移除所有自索引（Index）至索引+vCount-1范围内的数组元素。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Count := Object.Remove(FirstKey, LastKey): Remove a range of keys and return the number of actual key-value pairs removed.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132157Z">
-        <seg>?Count := Object.Remove(FirstKey, LastKey)：移除关于键的范围，返回实际移除的键值对的数量。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?In place of the command name, write the target object and method name separated by a dot.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T133949Z">
-        <seg>命令名处，使用对象与句点连接的方法。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?ObjRawSet(Object, Key, Value): Assigns a value to the object, bypassing any meta-functions.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132808Z">
-        <seg>ObjRawSet(Object, Key, Value)：赋值到对象，跳过任何元方法。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Stack.Push(Value1, ...): Insert one or more values at the end of the array.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132612Z">
-        <seg>Stack.Push(Value1, ...)：在数组末尾插入一个或多个值。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?The return value is always discarded; there is no output variable.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T134014Z">
-        <seg>返回值被丢弃；没有输出变量。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Value := Array.RemoveAt(Index): Remove and return the array element at Index.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132338Z">
-        <seg>?Value := Array.RemoveAt(Index)：移除并返回数组索引（Index）处的元素。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Value := Object.Remove(Key): Remove Key and return its prior value.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132122Z">
-        <seg>?Value := Object.Remove(Key)：移除Key（键），返回他对应的值。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>?Value := Stack.Pop(): Remove and return the last array element.</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132636Z">
-        <seg>Value := Stack.Pop()：移除并返回最后一个数组（栈）元素。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>A for-loop can be used to find the lowest key.</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T132952Z">
@@ -299,11 +203,6 @@
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T111725Z">
         <seg>禁止OnMessage中使用方法做消息响应函数，以避免混乱。</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>Feed - Active Topics</seg>
       </tuv>
     </tu>
     <tu>
@@ -647,30 +546,6 @@
     </tu>
     <tu>
       <tuv lang="EN-US">
-        <seg>abc</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T093304Z">
-        <seg>123</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>en-gb</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T020909Z">
-        <seg>en-2gb</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
-        <seg>no</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T031510Z">
-        <seg>no</seg>
-      </tuv>
-    </tu>
-    <tu>
-      <tuv lang="EN-US">
         <seg>v2.0-a045-bbf6f99</seg>
       </tuv>
       <tuv lang="ZH-CN" changeid="RobertL" changedate="20140801T085523Z">
@@ -734,28 +609,5 @@
       </tuv>
     </tu>
 <!-- Alternative translations -->
-    <tu>
-      <prop type="file">View topic - AutoHotkey v2 alpha • AHKScript.htm</prop>
-      <prop type="prev">en-gb</prop>
-      <prop type="next">en-gb</prop>
-      <note>123</note>
-      <tuv lang="EN-US">
-        <seg>en-gb</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T030019Z">
-        <seg></seg>
-      </tuv>
-    </tu>
-    <tu>
-      <prop type="file">View topic - AutoHotkey v2 alpha • AHKScript.htm</prop>
-      <prop type="prev">en-gb</prop>
-      <prop type="next">no</prop>
-      <tuv lang="EN-US">
-        <seg>en-gb</seg>
-      </tuv>
-      <tuv lang="ZH-CN" changeid="Lin" changedate="20140801T020931Z">
-        <seg></seg>
-      </tuv>
-    </tu>
   </body>
 </tmx>

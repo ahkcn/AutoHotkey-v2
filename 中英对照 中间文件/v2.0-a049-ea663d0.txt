@@ -7,7 +7,7 @@ ObjNewEnum(x) is still equivalent to x._NewEnum() for Objects.
 ObjNewEnum(x)仍等效x._NewEnum()。
 
 To remove common points of confusion related to the dual nature of Objects (as associative arrays which can be used like linear arrays), the methods Insert and Remove have been split into the following (where Object, Array and Stack are all simply objects):
-为了解决关于对象双重性的混乱（如，关联数组可作线性数组使用），方法Insert与Remove分为以下（其中Object、Array及Stack均为对象）：
+为了解决关于对象双重性的混乱（如，关联数组可作线性数组使用），方法Insert与Remove拆分如下（其中Object、Array及Stack均为对象）：
 
 Value := Object.Remove(Key): Remove Key and return its prior value.
 Value := Object.Remove(Key)：移除Key（键），返回他对应的值。

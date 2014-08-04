@@ -1,10 +1,22 @@
 v2.0-a045-bbf6f99
 
+For information about AutoHotkey v2, click the link above.
+关于AHK V2，见链接。
+
+A summary of changes will be posted here each time a new alpha is released.
+每次的变更记录会追加到本主题
+
+Changes from v1.1 to v2.0-a
+V1.1自V2.0-a的变更文档
+
+v2.0-a045-bbf6f99
+v2.0-a045-bbf6f99
+
 New operator is replaces if var is type.
-操作符is替换if var is type
+操作符is替换掉if var is type。
 
 Since type is a string, it must be enclosed in quote marks (or a variable) - for example, n is 'number'.
-type（类型）是字符串，故需置于引号中（或变量中）—如，n is 'number'。
+type（类型）的值是字符串，故需置于引号中（或变量中）—如，n is 'number'。
 
 The same type names are supported as before, plus object and byref.
 支持的类型名称新增object、byref。
@@ -34,7 +46,7 @@ DllCall与RegExMatch/Replace使用异常取代ErrorLevel。
 OnMessage失败时抛出异常；若无消息处理函数，返回空字符串。
 
 Commands() which returned ErrorLevel in previous v2 alphas now return !ErrorLevel (1 on success and 0 on failure), except for RunWait and SendMessage, which still return ErrorLevel.
-之前v2 alphas版本中Commands()返回ErrorLevel的情况，如今返回!ErrorLevel（1-成功，0-失败），除了RunWait与SendMessage，他们仍返回ErrorLevel。
+之前v2 alphas版本中Commands()返回ErrorLevel的情况，如今返回!ErrorLevel（1-成功，0-失败），除RunWait与SendMessage外，他们仍返回ErrorLevel。
 
 Commands which set ErrorLevel now do so regardless of how they are called.
 不论命令以何种方式调用，命令均会设置ErrorLevel。
@@ -43,10 +55,10 @@ See Command() in v2-changes for an overview of how this works.
 见V2变更文档中Command()部分。
 
 Fixed output vars of built-in functions to not require percent signs when called with command syntax.
-修复内嵌函数的输出变量，以便在命令形式的调用中无需添加百分号。
+修复内嵌函数的输出变量，以便在命令调用方式中无需再为其添加百分号。
 
 All WinSet' functions now return 1 on success, 0 on failure, while ErrorLevel is set to 0 on success, 1 on failure.
-所以的WinSet函数成功时返回1，失败时返回0，同时，ErrorLevel成功时为0，失败时为1。
+所有的WinSet函数成功时返回1，失败时返回0，同时，ErrorLevel成功时为0，失败时为1。
 
 word ? x : y, word ++ and word -- are no longer expressions, since word can be a user-defined command.
 word ? x : y、word ++与word --不再是表达式，因为word可能为用户定义的命令。
