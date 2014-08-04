@@ -15,7 +15,7 @@
 [V2变更文档](http://ahkscript.org/v2/v2-changes.htm)中*Error Handing（错误处理）*，需强调：
 
 * 在`try`块内使用命令，不再致使异常。
-* `DllCall`与`RegExMatch/Replace`使用异常取代`ErrorLevel`。
+* `DllCall`与`RegExMatch/Replace`使用*异常*取代`ErrorLevel`。
 * 表达式求值与对象使用中包含更多可能触发异常的条件检查。
 * `OnMessage`失败时抛出异常；若无消息处理函数，返回空字符串。
 
