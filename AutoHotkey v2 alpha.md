@@ -16,8 +16,8 @@
 
 * 在`try`块内使用命令，不再致使异常。
 * `DllCall`与`RegExMatch/Replace`使用*异常*取代`ErrorLevel`。
-* 表达式求值与对象使用中包含更多可能触发异常的条件检查。
-* `OnMessage`失败时抛出异常；若无消息处理函数，返回空字符串。
+* 表达式求值与对象使用中包含更多可能触发*异常*的条件检查。
+* `OnMessage`失败时抛出*异常*；若无消息处理函数，返回空字符串。
 
 之前v2 alphas版本中`Commands()`返回`ErrorLevel`的情况，如今返回`!ErrorLevel`（1-成功，0-失败），除了`RunWait`与`SendMessage`，他们仍返回`ErrorLevel`。不论命令以何种方式调用，命令均会设置`ErrorLevel`。见[V2变更文档](http://ahkscript.org/v2/v2-changes.htm)中*Command()（命令函数调用形式）*部分。
 
