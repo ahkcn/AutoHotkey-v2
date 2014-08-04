@@ -80,7 +80,7 @@ V2中，若无别处"持有"关于`pdsp`的引用，则脚本须在`ComObject(pd
 
 `Objects`（对象）与`SafeArrays`的内置方法不再支持_（下划线）前缀，除了`_NewEnum`（因为COM对象的兼容性需要）。`ObjNewEnum(x)`仍等效`x._NewEnum()`。
 
-为了解决关于对象双重性的混乱（如，关联数组可作线性数组使用），方法`Insert`与`Remove`分为以下（其中`Object`、`Array`及`Stack`均为对象）：
+为了解决关于对象双重性的混乱（如，关联数组可作线性数组使用），方法`Insert`与`Remove`拆分如下（其中`Object`、`Array`及`Stack`均为对象）：
 
 
 * `Value := Object.Remove(Key)`：移除Key（键），返回他对应的值。
