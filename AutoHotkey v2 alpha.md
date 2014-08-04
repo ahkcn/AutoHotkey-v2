@@ -33,7 +33,7 @@
 
 ---
 
-##v2.0-a046-692ef59
+###[v2.0-a046-692ef59](http://ahkscript.org/boards/viewtopic.php?p=16591#p16591)
 
 移除`ComObj...()`的"多态"行为。  
 从`ComObject()`中移出`ComObjActive()`，并改变"持有者关系" - 见后。  
@@ -61,14 +61,14 @@ V2中，若无别处"持有"关于`pdsp`的引用，则脚本须在`ComObject(pd
 
 
 ---
-##v2.0-a047-3defc4a.txt
+###[v2.0-a047-3defc4a.txt](http://ahkscript.org/boards/viewtopic.php?p=17284#p17284)
 
 修正`co`、`con`、`contain`等，不作为表达式的保留字。  
 
 合并v1.1.14.04。
 
 ---
-##v2.0-a048-573f142
+###[v2.0-a048-573f142](http://ahkscript.org/boards/viewtopic.php?p=20021#p20021)
 
 增强Click，使支持函数语法 - `Click(x, y)`。	
 改变，`RegExMatch` / `RegExReplace`在PCRE执行错误时，抛出异常。	
@@ -76,7 +76,7 @@ V2中，若无别处"持有"关于`pdsp`的引用，则脚本须在`ComObject(pd
 改变，对象处理数值字符串为字符串，而非数值。
 
 ---
-##v2.0-a049-ea663d0
+###[v2.0-a049-ea663d0](http://ahkscript.org/boards/viewtopic.php?p=22371#p22371)
 
 `Objects`（对象）与`SafeArrays`的内置方法不再支持_（下划线）前缀，除了`_NewEnum`（因为COM对象的兼容性需要）。`ObjNewEnum(x)`仍等效`x._NewEnum()`。
 
