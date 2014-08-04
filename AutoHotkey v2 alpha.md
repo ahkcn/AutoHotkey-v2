@@ -8,7 +8,7 @@
 
 ###v2.0-a045-bbf6f99
 
-操作符`is`替换`if var is typetype`（类型）是字符串，故需置于引号中（或变量中），如，`n is 'number'`。支持的类型名称新增`object`、`byref`。此外，对`x is y`，当`y`是对象时，检测`x`是否派生自`y`，不论直接或间接。
+操作符`is`替换掉`if var is type`。type（类型）的值是字符串，故需置于引号中（或变量中），如，`n is 'number'`。支持的类型名称新增`object`、`byref`。此外，对`x is y`，当`y`是对象时，检测`x`是否派生自`y`，不论直接或间接。
 
 `contains`及`in`为脚本保留的关键词。
 
