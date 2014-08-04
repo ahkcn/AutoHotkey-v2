@@ -19,11 +19,11 @@
 * 表达式求值与对象使用中包含更多可能触发*异常*的条件检查。
 * `OnMessage`失败时抛出*异常*；若无消息处理函数，返回空字符串。
 
-之前v2 alphas版本中`Commands()`返回`ErrorLevel`的情况，如今返回`!ErrorLevel`（1-成功，0-失败），除了`RunWait`与`SendMessage`，他们仍返回`ErrorLevel`。不论命令以何种方式调用，命令均会设置`ErrorLevel`。见[V2变更文档](http://ahkscript.org/v2/v2-changes.htm)中*Command()（命令函数调用形式）*部分。
+之前v2 alphas版本中`Commands()`返回`ErrorLevel`的情况，如今返回`!ErrorLevel`（1-成功，0-失败）；除`RunWait`与`SendMessage`外，他们仍返回`ErrorLevel`。不论命令以何种方式调用，命令均会设置`ErrorLevel`。见[V2变更文档](http://ahkscript.org/v2/v2-changes.htm)中*Command()（命令的函数调用方式）*部分。
 
-修复内嵌函数的输出变量，以便在命令形式的调用中无需添加百分号。
+修复内置函数的输出变量，以便在命令调用方式中无需再为其添加百分号。
 
-所以的`WinSet`函数成功时返回1，失败时返回0，同时，`ErrorLevel`成功时为0，失败时为1。
+所有的`WinSet`函数成功时返回1，失败时返回0，同时，`ErrorLevel`成功时为0，失败时为1。
 
 `word ? x : y`、`word ++`与`word --`不再是表达式，因为`word`可能为用户定义的命令。要使用三元操作符或后置自增操作符或后置自减操作符，可移除变量与操作符间的空格，或，使用圆括号包裹变量。
 
