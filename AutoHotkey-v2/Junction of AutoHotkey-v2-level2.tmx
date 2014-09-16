@@ -30,10 +30,62 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Added support for binary zero in strings in expressions, and in objects.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T022631Z">
+        <seg>增加支持：表达式及对象中的字符串可包含二进制零。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Added support for comparing binary data using ==.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T022657Z">
+        <seg>增加支持：可使用==比较二进制数据。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Additionally x is y, where y is an object, checks if x derives from y, directly or indirectly.</seg>
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T092833Z">
         <seg>此外，对x is y，当y是对象时，检测x是否派生自y，不论直接或间接。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Affects the following:
+WinActive
+WinExist
+WinGetID
+WinGetIDLast
+WinGetList
+WinGetStyle
+WinGetStyleEx
+WinGetControlsHwnd
+ControlGet Hwnd
+Gui +HwndVarname
+GuiControlGet Hwnd
+Gui Add, ..., +HwndVarname
+MouseGetPos
+A_ScriptHwnd returns a string due to a technical limitation, but in decimal for consistency.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T023950Z">
+        <seg>涉及如下：
+WinActive
+WinExist
+WinGetID
+WinGetIDLast
+WinGetList
+WinGetStyle
+WinGetStyleEx
+WinGetControlsHwnd
+ControlGet Hwnd
+Gui +HwndVarname
+GuiControlGet Hwnd
+Gui Add, ..., +HwndVarname
+MouseGetPos
+由于技术限制，A_ScriptHwnd仍返回字符串，考虑一致性，为十进制数值形式。</seg>
       </tuv>
     </tu>
     <tu>
@@ -102,6 +154,30 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Changed ExitApp to pass ExitCode to the OnExit callback.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024206Z">
+        <seg>更改ExitApp，可以传递退出代码（ExitCode）至OnExit回调。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Changed ExpandExpression() to free object references after completion.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T023015Z">
+        <seg>更改ExpandExpression()，使在（调用？）完成时释放对象引用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Changed File commands to throw an error if given invalid parameters.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024449Z">
+        <seg>更改File命令在无效参数时抛出错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Changed FileOpen() error handling for consistency with other commands.</seg>
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T100640Z">
@@ -110,10 +186,66 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Changed Func() to accept either a function name or a function reference.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024028Z">
+        <seg>更改Func()使可接收函数名或函数引用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Changed KeyWait to throw an error if KeyName is invalid.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T023530Z">
+        <seg>更改KeyWait，当KeyName无效时将抛出错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Changed OnClipboardChange() to affect script persistence.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024238Z">
+        <seg>更改OnClipboardChange()可使脚本持续化。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Changed OnClipboardChange() to not immediately call the function.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024325Z">
+        <seg>更改OnClipboardChange()，使其不立即调用函数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Changed RegExMatch/RegExReplace to throw on PCRE execution errors.</seg>
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T130242Z">
         <seg>改变，RegExMatch / RegExReplace在PCRE执行错误时，抛出异常。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Changed StrSplit() to raise an error for invalid delimiters.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024348Z">
+        <seg>更改StrSplit()在无效分隔符时抛出错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Changed VarSetCapacity to throw whenever capacity is invalid/too high.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024427Z">
+        <seg>更改VarSetCapacity在容量无效/过大时抛出错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Changed commands/functions to return HWNDs and styles as pure integers.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T023740Z">
+        <seg>更改命令/函数返回纯整数的HWND及（或?）style。</seg>
       </tuv>
     </tu>
     <tu>
@@ -207,6 +339,14 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Fixed &amp;byref_var_containing_int.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030654Z">
+        <seg>修正&amp;byref_var_containing_int（对包含数值的引用变量取地址）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Fixed 'co', 'con', 'contain', etc. to not be reserved in expressions.</seg>
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T125552Z">
@@ -215,10 +355,98 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Fixed ACT_FUNC/ACT_METHOD to support % v:=1 and % v:={} ByRef.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030055Z">
+        <seg>修正ACT_FUNC/ACT_METHOD以支持% v:=1及% v:={}输入形式的引用。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed Abs()/Mod() to not overwrite params which might be string/object.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030204Z">
+        <seg>修正Abs()/Mod()不再覆盖（字符串/对象）参数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed JoyPOV to yield integer -1 when centered, not string.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T023505Z">
+        <seg>修复JoyPOV当居中时返回整数-1，而非字符串。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed RegEx Callouts to be able to throw exceptions or to Exit the thread.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030522Z">
+        <seg>修正RegEx调出，使其可以抛出异常或退出线程。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed StrPut("", Encoding) - fixed by c3d844e, then broken by 855815e.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030005Z">
+        <seg>修正StrPut("",Encoding)-修正于c3d844e，后于855815e被破坏。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed X(,(y)) and X(,"%y%") incorrectly raising an error.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024544Z">
+        <seg>修正X(,(y))与X(,"%y%")不正确地导致错误的问题。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed a crash occurring when return "string" returns to CallFunc().</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024626Z">
+        <seg>修正返回"string"（字符串）至CallFunc()时导致崩溃的问题。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed a memory leak occuring when RegExReplace throws an error.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030447Z">
+        <seg>修正当RegExReplace抛出异常时的内存泄露。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed command-style calls with no params to not require an output var.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030426Z">
+        <seg>修正无参数的命令形式调用，不再需要输出参数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Fixed commands which don't set ErrorLevel at all to not return 1.</seg>
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T100534Z">
         <seg>修正那些不涉及ErrorLevel的命令，不再返回1。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed method-commands to invoke the default base object when appropriate.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T025940Z">
+        <seg>修正方法做命令调用，当需要时会触发默认基对象。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed optimization to not make A_Index/A_EventInfo non-numeric.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T025104Z">
+        <seg>修正优化，不再致使A_Index/A_EventInfo变为非数值。</seg>
       </tuv>
     </tu>
     <tu>
@@ -235,6 +463,70 @@
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T133749Z">
         <seg>修正使用命令语法传递对象与数字到函数的错误。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed plain text args of ACT_FUNC/ACT_METHOD (broken by 69e9675).</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030238Z">
+        <seg>修正ACT_FUNC/ACT_METHOD中的纯文本参数（于69e9675被损坏）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed return "just a string" to not literally include the quote marks.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024742Z">
+        <seg>修正返回"带引号的字符串"的结果不包含引号的问题。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed several uses of strings in objects (broken by 8cd2072).</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030547Z">
+        <seg>修正一些在对象中使用字符串的错误（于8cd2072破坏）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed simple % int args for ACT_METHOD.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024846Z">
+        <seg>修正关于ACT_METHOD的简单% int（整数）参数。（？）</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed some object reference leaks.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030251Z">
+        <seg>修正一些对象引用泄露。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed throw str.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030113Z">
+        <seg>修正throw str（抛出字符串）。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed x.1 to call with an integer key, consistent with x.1().</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T025854Z">
+        <seg>修正，将x.1作为关于数值键的调用，与x.1()一致。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Fixed x.y to call rather than get, consistent with x.y,.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T025501Z">
+        <seg>修正x.y作为调用，而非读，与x.y,一致。</seg>
       </tuv>
     </tu>
     <tu>
@@ -313,10 +605,26 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Major review of several areas of the code, with related bug-fixes, optimizations, and probably bugs.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024910Z">
+        <seg>概要：涉及多个代码区域，Bug及潜在Bug修复、优化。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Merged v1.1.14.04.</seg>
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T125605Z">
         <seg>合并v1.1.14.04。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Merged v1.1.16.03 (plus a bug-fix).</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T030725Z">
+        <seg>合并v1.1.16.03（及对错误的修复）。</seg>
       </tuv>
     </tu>
     <tu>
@@ -333,6 +641,14 @@
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140804T143759Z">
         <seg>操作符is替换掉if var is type。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>ObjAddRef(addr := &amp;object) can be used instead.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024137Z">
+        <seg>使用ObjAddRef(addr := &amp;object)代替。</seg>
       </tuv>
     </tu>
     <tu>
@@ -368,6 +684,14 @@
       </tuv>
     </tu>
     <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Optimized returning dynamically-allocated values from functions.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T023114Z">
+        <seg>优化函数返回的动态分配的值。</seg>
+      </tuv>
+    </tu>
+    <tu>
       <note>不确定。</note>
       <tuv xml:lang="EN-US">
         <seg>Parameter count validation and out-of-memory handling in Object methods has been brought in line with the majority of built-in functions.</seg>
@@ -382,6 +706,14 @@
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T111334Z">
         <seg>移除ComObj...()的"多态"行为。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Removed ACT_GETKEYSTATE, reducing code size and fixing "GetKeyState Joy%btn%" to return 0/1 instead of U/D.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T023316Z">
+        <seg>移除ACT_GETKEYSTATE，减小代码大小，并修复"GetKeyState Joy%btn%"以返回0/1而非U/D。</seg>
       </tuv>
     </tu>
     <tu>
@@ -402,6 +734,14 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Removed object -&gt; address mode of Object().</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T024108Z">
+        <seg>移除Object()的对象-&gt;地址模式。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>Renamed Args to A_Args and changed behaviour slightly.</seg>
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T100810Z">
@@ -418,6 +758,14 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>Revised GetKeyState and KeyWait.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T023229Z">
+        <seg>修正GetKeyState及KeyWait。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>See Command() in v2-changes for an overview of how this works.</seg>
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T082823Z">
@@ -430,6 +778,14 @@
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T080322Z">
         <seg>V2变更文档中Error Handing（错误处理），</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>Side note: standalone "x.y" expressions were originally disallowed.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T025541Z">
+        <seg>旁注：原本就禁止单独的x.y表达式。</seg>
       </tuv>
     </tu>
     <tu>
@@ -478,6 +834,14 @@
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T075418Z">
         <seg>支持的类型名称新增object、byref。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>This was changed to allow lazy VB converts to use code like "App.Quit", which should still work, but will now also work with AHK Objects.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T025742Z">
+        <seg>此项更改用于支持惰性VB转换，以便使用类似App.Quit形式的代码，其应该仍可以工作，且当前支持对象了。</seg>
       </tuv>
     </tu>
     <tu>
@@ -546,10 +910,34 @@
     </tu>
     <tu>
       <tuv xml:lang="EN-US">
+        <seg>[fincs] Changed OnExit to accept a function.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T022818Z">
+        <seg>[fincs]更改OnExit使可接收函数参数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>[fincs] Removed OnClipboardChange and added a function like OnExit.</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T022919Z">
+        <seg>[fincs]移除OnClipboardChange，增加类似于OnExit的函数。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
         <seg>v2.0-a045-bbf6f99</seg>
       </tuv>
       <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140801T085523Z">
         <seg>v2.0-a045-bbf6f99</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv xml:lang="EN-US">
+        <seg>v2.0-a050-712e1d8</seg>
+      </tuv>
+      <tuv xml:lang="ZH-CN" changeid="RobertL" changedate="20140916T022052Z">
+        <seg>v2.0-a050-712e1d8</seg>
       </tuv>
     </tu>
     <tu>

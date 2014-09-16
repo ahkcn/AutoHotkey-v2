@@ -1,0 +1,62 @@
+v2.0-a050-712e1d8
+
+Major review of several areas of the code, with related bug-fixes, optimizations, and probably bugs.
+
+Added support for binary zero in strings in expressions, and in objects.
+Added support for comparing binary data using ==.
+
+[fincs] Changed OnExit to accept a function.
+[fincs] Removed OnClipboardChange and added a function like OnExit.
+Changed ExpandExpression() to free object references after completion.
+
+Optimized returning dynamically-allocated values from functions.
+Revised GetKeyState and KeyWait.
+Removed ACT_GETKEYSTATE, reducing code size and fixing "GetKeyState Joy%btn%" to return 0/1 instead of U/D.
+Fixed JoyPOV to yield integer -1 when centered, not string.
+Changed KeyWait to throw an error if KeyName is invalid.
+Changed commands/functions to return HWNDs and styles as pure integers. Affects the following:
+WinActive
+WinExist
+WinGetID
+WinGetIDLast
+WinGetList
+WinGetStyle
+WinGetStyleEx
+WinGetControlsHwnd
+ControlGet Hwnd
+Gui +HwndVarname
+GuiControlGet Hwnd
+Gui Add, ..., +HwndVarname
+MouseGetPos
+A_ScriptHwnd returns a string due to a technical limitation, but in decimal for consistency.
+Changed Func() to accept either a function name or a function reference.
+Removed object -> address mode of Object(). ObjAddRef(addr := &object) can be used instead.
+Changed ExitApp to pass ExitCode to the OnExit callback.
+Changed OnClipboardChange() to affect script persistence.
+Changed OnClipboardChange() to not immediately call the function.
+
+Changed StrSplit() to raise an error for invalid delimiters.
+Changed VarSetCapacity to throw whenever capacity is invalid/too high.
+Changed File commands to throw an error if given invalid parameters.
+
+Fixed X(,(y)) and X(,"%y%") incorrectly raising an error.
+Fixed a crash occurring when return "string" returns to CallFunc().
+Fixed return "just a string" to not literally include the quote marks.
+Fixed simple % int args for ACT_METHOD.
+Fixed optimization to not make A_Index/A_EventInfo non-numeric.
+Fixed x.y to call rather than get, consistent with x.y,. Side note: standalone "x.y" expressions were originally disallowed. This was changed to allow lazy VB converts to use code like "App.Quit", which should still work, but will now also work with AHK Objects.
+Fixed x.1 to call with an integer key, consistent with x.1().
+Fixed method-commands to invoke the default base object when appropriate.
+Fixed StrPut("", Encoding) - fixed by c3d844e, then broken by 855815e.
+Fixed ACT_FUNC/ACT_METHOD to support % v:=1 and % v:={} ByRef.
+Fixed throw str.
+Fixed Abs()/Mod() to not overwrite params which might be string/object.
+Fixed plain text args of ACT_FUNC/ACT_METHOD (broken by 69e9675).
+Fixed some object reference leaks.
+Fixed command-style calls with no params to not require an output var.
+Fixed a memory leak occuring when RegExReplace throws an error.
+Fixed RegEx Callouts to be able to throw exceptions or to Exit the thread.
+Fixed several uses of strings in objects (broken by 8cd2072).
+Fixed &byref_var_containing_int.
+
+Merged v1.1.16.03 (plus a bug-fix).

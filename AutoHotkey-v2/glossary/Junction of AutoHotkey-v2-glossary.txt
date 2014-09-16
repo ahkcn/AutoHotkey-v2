@@ -1,0 +1,4 @@
+OnExit	OnExit
+OnClipboardChange	OnClipboardChange
+GetKeyState	GetKeyState
+KeyWait	KeyWait
