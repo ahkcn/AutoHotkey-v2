@@ -1,4 +1,4 @@
-﻿翻译[AutoHotkey v2 alpha](http://ahkscript.org/boards/viewtopic.php?f=24&t=2120)
+翻译[AutoHotkey v2 alpha](http://ahkscript.org/boards/viewtopic.php?f=24&t=2120)
 
 ---
 
@@ -106,3 +106,71 @@ V2中，若无别处"持有"关于`pdsp`的引用，则脚本须在`ComObject(pd
 * 命令名处，使用对象与句点连接的方法。`Var.Method`及`Var.Property.Method`均可，但更复杂的情况（如 `Var[x].Method`或`%Var%.Method`）不可。
 * 返回值被丢弃；没有输出变量。
 * 所有的参数默认为文本字符串。
+
+---
+### [v2.0-a050-712e1d8](http://ahkscript.org/boards/viewtopic.php?p=26040#p26040) ###
+
+概要：涉及多个代码区域，Bug及潜在Bug修复、优化。
+
+增加支持：表达式及对象中的字符串可包含二进制零。  
+增加支持：可使用`==`比较二进制数据。  
+
+[fincs]更改[OnExit](http://lexikos.github.io/v2/docs/commands/OnExit.htm)使可接收函数参数。  
+[fincs]移除`OnClipboardChange`，增加[类似于OnExit的函数](http://lexikos.github.io/v2/docs/misc/Clipboard.htm#OnClipboardChange)。  
+更改`ExpandExpression()`，使在（调用？）完成时释放对象引用。
+
+优化函数返回的动态分配的值。  
+修正`GetKeyState`及`KeyWait`。
+
+* 移除ACT\_GETKEYSTATE，减小代码大小，并修复`GetKeyState Joy%btn%`以返回0/1而非U/D。
+* 修复`JoyPOV`当居中时返回整数-1，而非字符串。
+* 更改`KeyWait`，当`KeyName`无效时将抛出错误。
+
+更改命令/函数返回纯整数的HWND及（或?）style。涉及如下：
+
+* WinActive
+* WinExist
+* WinGetID
+* WinGetIDLast
+* WinGetList
+* WinGetStyle
+* WinGetStyleEx
+* WinGetControlsHwnd
+* ControlGet Hwnd
+* Gui +HwndVarname
+* GuiControlGet Hwnd
+* Gui Add, ..., +HwndVarname
+* MouseGetPos
+
+由于技术限制，`A_ScriptHwnd`仍返回字符串，考虑一致性，为十进制数值形式。  
+更改`Func()`使可接收函数名或函数引用。  
+移除`Object()`的*对象->地址*模式。使用`ObjAddRef(addr := &object)`代替。  
+更改`ExitApp`，可以传递退出代码（`ExitCode`）至`OnExit`回调。  
+更改`OnClipboardChange()`可使脚本持续化。  
+更改`OnClipboardChange()`，使其不立即调用函数。
+
+更改`StrSplit()`在无效分隔符时抛出错误。  
+更改`VarSetCapacity`在容量无效/过大时抛出错误。  
+更改`File`命令在无效参数时抛出错误。
+
+修正`X(,(y))`与`X(,"%y%")`不正确地导致错误的问题。  
+修正`return "string"`（返回字符串）至`CallFunc()`时导致崩溃的问题。  
+修正`return "字符串"`（返回"带引号的字符串"）的结果不包含引号的问题。  
+修正关于ACT\_METHOD的简单`% int`（整数）参数。（？）  
+修正优化，不再致使`A_Index`/`A_EventInfo`变为非数值。  
+修正`x.y`作为调用，而非读，与`x.y,`一致。旁注：原本就禁止单独的`x.y`表达式。此项更改用于支持惰性VB转换，以便使用类似`App.Quit`形式的代码，其应该仍可以工作，且当前支持对象了。  
+修正，将`x.1`作为关于数值键的调用，与`x.1()`一致。  
+修正方法做命令调用，当需要时会触发默认基对象。  
+修正`StrPut("",Encoding)`-修正于c3d844e，后于855815e被破坏。  
+修正ACT\_FUNC/ACT\_METHOD以支持`% v:=1`及`% v:={}`输入形式的引用。  
+修正`throw str`（抛出字符串）。  
+修正`Abs()`/`Mod()`不再覆盖（字符串/对象）参数。  
+修正ACT\_FUNC/ACT\_METHOD中的纯文本参数（于69e9675被损坏）。  
+修正一些对象引用泄露。  
+修正无参数的命令形式调用，不再需要输出参数。  
+修正当`RegExReplace`抛出异常时的内存泄露。  
+修正`RegEx`调出，使其可以抛出异常或退出线程。  
+修正一些在对象中使用字符串的错误（于8cd2072破坏）。  
+修正`&byref_var_containing_int`（对包含数值的引用变量取地址）。
+
+合并v1.1.16.03（及对错误的修复）。
